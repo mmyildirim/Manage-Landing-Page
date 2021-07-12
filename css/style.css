@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 ###Primary
 
@@ -36,11 +37,28 @@ body {
   scroll-behavior: smooth;
   background-repeat: no-repeat; }
 
+/*------------------------------------------<Common Classes>-----------------------------------------------------*/
+.btn--color {
+  margin: 0 15px;
+  padding: 15px 40px;
+  font-weight: bold;
+  background-color: #f25f3a;
+  border-radius: 5.5em;
+  color: #ffefeb !important;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px; }
+  .btn--color:hover {
+    opacity: 0.9; }
+
+/*---------------------------------------------------</Common Classes>-----------------------------------------------------*/
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center; }
 
+/*----------------------------------------------------<Navbar>--------------------------------------------------------------*/
 .navbar {
   margin-top: 15px;
   justify-content: space-around; }
@@ -59,6 +77,8 @@ body {
           color: #f1f1f4;
           text-decoration: none !important; }
 
+/*---------------------------------------------------</Navbar>---------------------------------------------------------------*/
+/*---------------------------------------------------<İnfo>-----------------------------------------------------------------*/
 .info {
   margin-top: 90px;
   display: flex;
@@ -71,13 +91,13 @@ body {
     order: 1; }
     .info__image--size {
       width: 100%;
-      height: 480px;
+      height: 440px;
       object-fit: contain; }
   .info__text {
     padding: 0 50px; }
     .info__text__title {
       padding: 20px 0; }
-    .info__text__title--big {
+    .info__text__title {
       font-weight: 700;
       line-height: 1.5;
       font-size: 45px !important;
@@ -85,28 +105,46 @@ body {
     .info__text__description {
       color: #9095a7;
       line-height: 1.7;
-      padding: 0 0  20px 0; }
-    .info__text__button {
-      padding: 0;
-      margin: 0;
-      margin-top: 10px !important;
-      border: none; }
+      padding: 0 0 20px 0; }
 
-.btn--color {
-  margin: 0 15px;
-  padding: 15px 40px;
-  font-weight: bold;
-  background-color: #f25f3a;
-  border-radius: 5.5em;
-  color: #ffefeb !important;
-  text-decoration: none;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 13px; }
-  .btn--color:hover {
-    opacity: 0.9; }
+/*---------------------------------------------------</İnfo>-----------------------------------------------------------------*/
+/*---------------------------------------------------<About>----------------------------------------------------------------*/
+.about {
+  margin-top: 80px; }
+  .about__info__title {
+    font-weight: 700;
+    line-height: 1.5;
+    font-size: 36px !important;
+    color: #242d52; }
+  .about__info__description {
+    color: #9095a7;
+    line-height: 1.7;
+    padding: 0 0 20px 0; }
+  .about .about__option__title__number {
+    font-weight: bold;
+    background-color: #f25f3a;
+    border-radius: 5.5em;
+    color: #ffefeb !important;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 7px 30px;
+    margin-right: 10px; }
+  .about .about__option__title__text {
+    font-weight: 700;
+    line-height: 1.5;
+    font-size: 20px !important;
+    color: #242d52;
+    text-align: center; }
+  .about .about__option__description {
+    color: #9095a7;
+    line-height: 1.7;
+    padding: 0 100px; }
 
+/*---------------------------------------------------</About>----------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
+  /*------------------------------------------------<Responsive Navbar>-----------------------------------------------------*/
   .navbar {
     margin: 0;
     justify-content: space-between;
@@ -150,6 +188,8 @@ body {
   .hide {
     display: none; }
 
+  /*------------------------------------------------Responsive Navbar-----------------------------------------------------*/
+  /*------------------------------------------------Responsive Info-------------------------------------------------------*/
   .info {
     margin-top: 0px;
     justify-content: center;
@@ -162,13 +202,43 @@ body {
       order: 2;
       padding: 0px; }
       .info__text__title {
-        padding: 5px 40px; }
-      .info__text__title--big {
+        padding: 5px 40px;
         line-height: 1.3 !important;
         font-size: 33px !important;
         font-weight: 700 !important;
         text-align: center; }
       .info__text__button {
-        margin-top: 5px !important; } }
+        margin-top: 5px !important; }
+
+  /*------------------------------------------------</Responsive Info>--------------------------------------------------------*/
+  /*------------------------------------------------<Responsive About>-------------------------------------------------------*/
+  .about__info {
+    padding-left: 20px;
+    margin-bottom: 5px; }
+    .about__info__title {
+      line-height: 1.3;
+      font-size: 30px !important;
+      text-align: center; }
+    .about__info__description {
+      line-height: 1.5;
+      padding: 0 0 20px 0;
+      text-align: center; }
+  .about .about__option {
+    margin-bottom: 30px; }
+    .about .about__option__title {
+      margin-bottom: 15px; }
+      .about .about__option__title__number {
+        padding: 7px 30px;
+        margin-right: 0px; }
+      .about .about__option__title__text {
+        line-height: 1.3;
+        font-size: 16px !important;
+        text-align: center;
+        background-color: #ffefeb; }
+    .about .about__option__description {
+      line-height: 1.5;
+      padding: 0 10px; }
+
+  /*------------------------------------------------</Responsive About>------------------------------------------------------*/ }
 
 /*# sourceMappingURL=style.css.map */
