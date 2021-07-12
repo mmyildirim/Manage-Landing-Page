@@ -1,0 +1,116 @@
+/*
+###Primary
+
+Bright Red: hsl(12, 88%, 59%)
+Dark Blue: hsl(228, 39%, 23%)
+
+### Neutral
+
+Dark Grayish Blue: hsl(227, 12%, 61%)
+Very Dark Blue: hsl(233, 12%, 13%)
+Very Pale Red: hsl(13, 100%, 96%)
+Vary Light Gray: hsl(0, 0%, 98%)
+
+### Body Copy
+
+- Font size: 16px
+
+### Font
+
+- Family: [Be Vietnam](https://fonts.google.com/specimen/Be+Vietnam)
+- Weights: 400, 500, 700
+*/
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@100&display=swap");
+/*Primary*/
+/*Neutral*/
+/*Font size*/
+/*margin*/
+body {
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  background: #fafafa;
+  box-sizing: border-box;
+  font-family: "Be Vietnam", sans-serif;
+  background-image: url(../img/bg-tablet-pattern.svg);
+  scroll-behavior: smooth;
+  background-repeat: no-repeat; }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.navbar {
+  padding: 50px 50px; }
+  .navbar__logo {
+    margin: 0 15px; }
+  .navbar__btn--color {
+    margin: 0 15px;
+    padding: 15px 40px;
+    background-color: #f25f3a;
+    border-radius: 5.5em;
+    color: #ffefeb !important;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 13px; }
+    .navbar__btn--color:hover {
+      opacity: 0.9; }
+  .navbar__list {
+    margin: 10px;
+    list-style: none;
+    display: flex; }
+    .navbar__list__item {
+      margin-right: 30px;
+      font-weight: bold; }
+      .navbar__list__item__link {
+        text-decoration: none;
+        color: #242d52; }
+        .navbar__list__item__link:hover {
+          color: #f1f1f4;
+          text-decoration: none !important; }
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    margin: 0;
+    align-items: center; }
+    .navbar__logo {
+      margin: 0px; }
+    .navbar__toggle {
+      width: 50px;
+      height: 50px;
+      background: url(../img/icon-hamburger.svg);
+      background-size: 30px;
+      background-position: center;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      z-index: 1000;
+      transition: 0.2s ease; }
+      .navbar__toggle.active {
+        background: url(../img/icon-close.svg);
+        background-size: 25px;
+        background-position: center;
+        background-repeat: no-repeat; }
+    .navbar__btn {
+      display: none; }
+    .navbar__list {
+      margin: 30% 0 0 0;
+      padding: 0;
+      background: #fff;
+      top: 0;
+      position: fixed;
+      display: block;
+      text-align: center;
+      max-height: 500px;
+      width: 75%;
+      border-radius: 0.8em;
+      border: 0.5px solid rgba(207, 205, 205, 0.8); }
+      .navbar__list__item {
+        margin: 25px;
+        font-size: 20px; }
+
+  .hide {
+    display: none; } }
+
+/*# sourceMappingURL=style.css.map */

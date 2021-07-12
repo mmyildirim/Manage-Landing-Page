@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar__logo">
+        <a href="/"><img src="/img/logo.svg" alt="" /></a>
+      </div>
+      <div class="navbar__toggle" onclick="menuToggle();"></div>
+      <ul class="navbar__list hide" onclick="menuToggle();">
+        <li class="navbar__list__item" onclick="menuToggle();">
+          <a class="navbar__list__item__link" href="">Pricing</a>
+        </li>
+        <li class="navbar__list__item">
+          <a class="navbar__list__item__link" href="">Product</a>
+        </li>
+        <li class="navbar__list__item">
+          <a class="navbar__list__item__link" href="">About Us</a>
+        </li>
+        <li class="navbar__list__item">
+          <a class="navbar__list__item__link" href="">Careers</a>
+        </li>
+        <li class="navbar__list__item">
+          <a class="navbar__list__item__link" href="">Community</a>
+        </li>
+      </ul>
+
+      <a class="navbar__btn navbar__btn--color">Get Started</a>
+    </div>
+   
+
+    <script>
+      function menuToggle() {
+        const menuToggle = document.querySelector(".navbar__toggle");
+        const list = document.querySelector(".navbar__list");
+        if (menuToggle.classList.value.includes("active")) {
+          console.log("macit");
+
+          list.classList.add("hide");
+        } else {
+          list.classList.remove("hide");
+        }
+        menuToggle.classList.toggle("active");
+        list.classList.toggle("active");
+      }
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        navbar.classList.toggle("sticky", window.scrollY > 0);
+      });
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

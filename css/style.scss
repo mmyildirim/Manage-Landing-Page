@@ -1,0 +1,158 @@
+/*
+###Primary
+
+Bright Red: hsl(12, 88%, 59%)
+Dark Blue: hsl(228, 39%, 23%)
+
+### Neutral
+
+Dark Grayish Blue: hsl(227, 12%, 61%)
+Very Dark Blue: hsl(233, 12%, 13%)
+Very Pale Red: hsl(13, 100%, 96%)
+Vary Light Gray: hsl(0, 0%, 98%)
+
+### Body Copy
+
+- Font size: 16px
+
+### Font
+
+- Family: [Be Vietnam](https://fonts.google.com/specimen/Be+Vietnam)
+- Weights: 400, 500, 700
+*/
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@100&display=swap");
+/*Primary*/
+$bright-red: hsl(12, 88%, 59%);
+$dark-blue: hsl(228, 39%, 23%);
+
+/*Neutral*/
+//$dark-grayish-blue: hsl(227, 12%, 61%);
+$dark-grayish-blue: hsl(240, 12%, 95%);
+$very-dark-blue: hsl(233, 12%, 13%);
+$very-pale-red: hsl(13, 100%, 96%);
+$vary-light-gray: hsl(0, 0%, 98%);
+
+/*Font size*/
+$font-weight-first: 400;
+$font-weight-second: 500;
+$font-weight-last: 700;
+$font-size:15px;
+/*margin*/
+
+body {
+  font-size: $font-size;
+  margin: 0;
+  padding: 0;
+  background: $vary-light-gray;
+  box-sizing: border-box;
+  font-family: "Be Vietnam", sans-serif;
+  background-image: url(../img/bg-tablet-pattern.svg);
+  scroll-behavior: smooth;
+  background-repeat: no-repeat;
+}
+%flex__box {
+  display: flex;
+  //justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+  .navbar {
+    padding: 50px 50px;
+    @extend %flex__box;
+    &__logo{
+      margin: 0 15px;
+    }
+   
+    &__btn--color{
+      margin: 0 15px;
+      padding:15px 40px;
+      background-color: $bright-red;
+      border-radius: 5.5em;
+      color: $very-pale-red !important;
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: $font-size - 2px;
+      &:hover{
+        opacity: 0.9;
+      }
+    }
+    &__list {
+      margin: 10px;
+      list-style: none;
+      display: flex;
+      
+      &__item {
+        margin-right: 30px;
+        font-weight: bold;
+      
+        &__link {
+          text-decoration: none;
+          color: $dark-blue;
+          &:hover{
+            color: $dark-grayish-blue;
+            text-decoration: none !important;
+            
+          }
+        }
+      }
+    }
+  }
+
+  
+  @media screen and (max-width: 768px) {
+    .navbar{
+     margin: 0;
+     &__logo{
+       margin: 0px;
+     }
+     &__toggle{
+      
+      width: 50px;
+      height: 50px;
+      background: url(../img/icon-hamburger.svg);
+      background-size: 30px;
+      background-position:center;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      z-index: 1000;
+    
+      transition:0.2s ease;
+      &.active{
+          background:  url(../img/icon-close.svg);
+          background-size: 25px;
+          background-position:center;
+          background-repeat: no-repeat;
+      }
+     }
+      
+      align-items: center;
+      &__btn{
+        display: none;
+      }
+      &__list{
+        margin:30% 0 0 0;
+        padding: 0;
+        background: #fff;
+        top:0;
+        position: fixed;
+        display: block;
+        text-align: center;
+        max-height: 500px;
+        width: 75%;
+        border-radius: 0.8em;
+        border:0.5px solid  rgba(207, 205, 205, 0.8);
+      
+        &__item{
+        margin: 25px;
+        font-size: $font-size+5;
+        }
+      }
+    }
+    .hide{
+      display: none;
+    }
+   
+  }
+  
