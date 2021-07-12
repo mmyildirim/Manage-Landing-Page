@@ -6,13 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
@@ -21,13 +14,14 @@
     <title>Document</title>
   </head>
   <body>
+    <div class="container d-flex flex-column">
     <div class="navbar">
       <div class="navbar__logo">
         <a href="/"><img src="/img/logo.svg" alt="" /></a>
       </div>
       <div class="navbar__toggle" onclick="menuToggle();"></div>
-      <ul class="navbar__list hide" onclick="menuToggle();">
-        <li class="navbar__list__item" onclick="menuToggle();">
+      <ul class="navbar__list hide" ">
+        <li class="navbar__list__item" ">
           <a class="navbar__list__item__link" href="">Pricing</a>
         </li>
         <li class="navbar__list__item">
@@ -44,10 +38,20 @@
         </li>
       </ul>
 
-      <a class="navbar__btn navbar__btn--color">Get Started</a>
+      <a class="navbar__btn btn--color">Get Started</a>
     </div>
-   
-
+    <div class="info row ">
+      <div class="info__image col-lg-6 col-sm-12"><img src="img/illustration-intro.svg" alt="" class="info__image--size" /></div>
+      <div class="info__text col-lg-6 col-sm-12">
+        <h1 class="info__text__title info__text__title--big  ">Bring everyone together to build better products.</h1>
+        <p class="info__text__description">
+          Manage makes it simple for  softwaree <br/>teams to plan day-to-day tasks while<br/> keeping the larger team goals in view.
+        </p>
+        <button class="info__text__button btn--color">Get Started</button>
+      </div>
+      
+    </div>
+</div>
     <script>
       function menuToggle() {
         const menuToggle = document.querySelector(".navbar__toggle");
