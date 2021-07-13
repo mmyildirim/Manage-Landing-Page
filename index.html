@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="/css/style.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="container d-flex flex-column">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <title>T-Soft Project</title>
+</head>
+
+<body>
+  <div class="container d-flex flex-column">
+    <!----------------------------------------------------------<Navbar>------------------------------------------------->
     <div class="navbar">
       <div class="navbar__logo">
         <a href="/"><img src="/img/logo.svg" alt="" /></a>
       </div>
       <div class="navbar__toggle" onclick="menuToggle();"></div>
       <ul class="navbar__list hide" ">
-        <li class="navbar__list__item" ">
-          <a class="navbar__list__item__link" href="">Pricing</a>
+        <li class=" navbar__list__item" ">
+          <a class=" navbar__list__item__link" href="">Pricing</a>
         </li>
         <li class="navbar__list__item">
           <a class="navbar__list__item__link" href="">Product</a>
@@ -40,100 +39,123 @@
 
       <a class="navbar__btn btn--color">Get Started</a>
     </div>
+    <!---------------------------------------------------------</Navbar>------------------------------------------------->
+
+    <!----------------------------------------------------------<Info>-------------------------------------------------->
     <div class="info row ">
-      <div class="info__image col-lg-6 col-sm-12"><img src="img/illustration-intro.svg" alt="" class="info__image--size" /></div>
+      <div class="info__image col-lg-6 col-sm-12"><img src="img/illustration-intro.svg" alt=""
+          class="info__image--size" /></div>
       <div class="info__text col-lg-6 col-sm-12">
         <h1 class="info__text__title">Bring everyone together to build better products.</h1>
         <p class="info__text__description ">
-          Manage makes it simple for  softwaree <br/>teams to plan day-to-day tasks while<br/> keeping the larger team goals in view.
+          Manage makes it simple for softwaree <br />teams to plan day-to-day tasks while<br /> keeping the larger team
+          goals in view.
         </p>
         <a class="btn--color">Get Started</a>
       </div>
     </div>
+    <!----------------------------------------------------------</Info>-------------------------------------------------->
+
+    <!----------------------------------------------------------<About>-------------------------------------------------->
     <div class="about row">
       <div class="about__info col-lg-6 col-sm-12">
         <h2 class="about__info__title ">What’s different about Manage?</h2>
         <p class="about__info__description">
-          Manage provides all the functionality<br/> your team needs, without the<br/> complexity. Our software is tailor-made <br/>for modern digital product teams.
+          Manage provides all the functionality<br /> your team needs, without the<br /> complexity. Our software is
+          tailor-made <br />for modern digital product teams.
         </p>
       </div>
       <div class="about__option col-lg-6 col-sm-12">
         <h3 class="about__option__title ">
-          <span class="about__option__title__number ">01</span> <span class="about__option__title__text">Track company-wide progress</span>
+          <span class="about__option__title__number ">01</span> <span class="about__option__title__text">Track
+            company-wide progress</span>
         </h3>
         <p class="about__option__description">
-          See how your day-to-day tasks fit into the wider vision. Go from tracking progress at the milestone level all the way done to the smallest
+          See how your day-to-day tasks fit into the wider vision. Go from tracking progress at the milestone level all
+          the way done to the smallest
           of details. Never lose sight of the bigger picture again.
         </p>
         <h3 class="about__option__title ">
-          <span class="about__option__title__number">02</span> <span class="about__option__title__text">Advanced built-in reports</span>
+          <span class="about__option__title__number">02</span> <span class="about__option__title__text">Advanced
+            built-in reports</span>
         </h3>
         <p class="about__option__description ">
-          Set internal delivery estimates and track progress toward company goals. Our customisable dashboard helps you build out the reports you need
+          Set internal delivery estimates and track progress toward company goals. Our customisable dashboard helps you
+          build out the reports you need
           to keep key stakeholders informed.
         </p>
         <h3 class="about__option__title ">
-          <span class="about__option__title__number">03</span> <span class="about__option__title__text">Everything you need in one place</span>
+          <span class="about__option__title__number">03</span> <span class="about__option__title__text">Everything you
+            need in one place</span>
         </h3>
         <p class="about__option__description">
-          Stop jumping from one service to another to communicate, store files, track tasks and share documents. Manage offers an all-in-one team
+          Stop jumping from one service to another to communicate, store files, track tasks and share documents. Manage
+          offers an all-in-one team
           productivity solution.
         </p>
       </div>
     </div>
-</div>
-    <script>
-      function menuToggle() {
-        const menuToggle = document.querySelector(".navbar__toggle");
-        const list = document.querySelector(".navbar__list");
-        if (menuToggle.classList.value.includes("active")) {
-          console.log("macit");
+    <!----------------------------------------------------------</About>------------------------------------------------->
 
-          list.classList.add("hide");
-        } else {
-          list.classList.remove("hide");
-        }
-        menuToggle.classList.toggle("active");
-        list.classList.toggle("active");
-      }
-      window.addEventListener("scroll", function () {
-        const navbar = document.querySelector(".navbar");
-        navbar.classList.toggle("sticky", window.scrollY > 0);
-      });
+    <!----------------------------------------------------------<Testimonials>------------------------------------------->
+    <div class="testimonials">
+      <h2 class="testimonials__title">What they’ve said</h2>
+      <ul class="testimonials__dots">
+        <li><button class="testimonials__dot" aria-label="See Anisha Li's Testimonial."></button></li>
+        <li><button class="testimonials__dot active" aria-label="See Ali Bravo's Testimonial."></button></li>
+        <li><button class="testimonials__dot" aria-label="See Richard Watts' Testimonial."></button></li>
+        <li><button class="testimonials__dot" aria-label="See Shanai Gough's Testimonial."></button></li>
+      </ul>
+      <div class="testimonials__block ">
+        <div class="testimonial">
+          <div class="testimonial__avatar-block">
+            <img src="img/avatar-anisha.png" alt="" class="testimonial__avatar" />
+          </div>
+          <p class="testimonial__author">Anisha Li<span class="screen-reader">.</span></p>
+          <p class="testimonial__description ">
+            “Manage has supercharged our team’s workflow. The ability to maintain visibility on larger milestones at all
+            times keeps everyone
+            motivated.”
+          </p>
+        </div>
+        <div class="testimonial shown">
+          <div class="testimonial__avatar-block"><img src="img/avatar-ali.png" alt="" class="testimonial__avatar" />
+          </div>
+          <p class="testimonial__author">Ali Bravo<span class="screen-reader">.</span></p>
+          <p class="testimonial__description">
+            “We have been able to cancel so many other subscriptions since using Manage.There is no more cross-channel
+            confusion and everyone is much
+            more focused.”
+          </p>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial__avatar-block"><img src="img/avatar-richard.png" alt="" class="testimonial__avatar" />
+          </div>
+          <p class="testimonial__author">Richard Watts<span class="screen-reader">.</span></p>
+          <p class="testimonial__description">
+            “Manage allows us to provide structure and process. It keeps us organized and focused. I can’t stop
+            recommending them to everyone I talk
+            to!”
+          </p>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial__avatar-block"><img src="img/avatar-shanai.png" alt="" class="testimonial__avatar" />
+          </div>
+          <p class="testimonial__author">Shanai Gough<span class="screen-reader">.</span></p>
+          <p class="testimonial__description">
+            “Their software allows us to track, manage and collaborate on our projects from anywhere. It keeps the whole
+            team in-sync without being
+            intrusive.”
+          </p>
+        </div>
+      </div>
+      <div class="testimonial__button"><a class="btn--color ">Get Started</a></div>
+    </div>
 
-     
+    <!---------------------------------------------------------</Testimonials>------------------------------------------->
 
+  </div>
+  <script src="./js/script.js"></script>
+</body>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </script>
-  </body>
 </html>
