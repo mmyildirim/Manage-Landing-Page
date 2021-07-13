@@ -257,6 +257,37 @@ body {
 }
 
 /*---------------------------------------------------</Testimonials>---------------------------------------------------------*/
+/*---------------------------------------------------<Simplify>--------------------------------------------------------------*/
+.simplify {
+  background: $bright-red;
+  color: $vary-light-gray;
+  padding: 75px 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__title {
+    font-size: $font-size + 20;
+    width: 450px;
+    font-weight: $font-weight-last;
+  }
+  &__button {
+    background: $vary-light-gray;
+    text-decoration: none;
+    color: $bright-red;
+    font-size: $font-size + 1;
+    font-weight: $font-weight-last;
+    border: none;
+    border-radius: 2.2em;
+    padding: 15px 40px;
+    &:hover,
+    &:focus {
+      background: $bright-red;
+      color: $vary-light-gray;
+    }
+  }
+}
+
+/*---------------------------------------------------<Simplify>--------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
   /*------------------------------------------------<Responsive Navbar>-----------------------------------------------------*/
   .navbar {
@@ -441,4 +472,19 @@ body {
   }
 
   /*------------------------------------------------</Responsive Testimonials>-----------------------------------------------*/
+  /*------------------------------------------------<Responsive Simplify>----------------------------------------------------*/
+  .simplify {
+    padding: 75px 35px;
+    flex-direction: column;
+    &__title {
+      width: 280px;
+      text-align: center;
+    }
+    &__button {
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
+
+  /*------------------------------------------------<Responsive Simplify>-----------------------------------------------------------*/
 }

@@ -230,6 +230,37 @@ body {
   }
 }
 /*---------------------------------------------------</Testimonials>---------------------------------------------------------*/
+/*---------------------------------------------------<Simplify>--------------------------------------------------------------*/
+.simplify {
+  background: #f25f3a;
+  color: #fafafa;
+  padding: 75px 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.simplify__title {
+  font-size: 35px;
+  width: 450px;
+  font-weight: 700;
+}
+.simplify__button {
+  background: #fafafa;
+  text-decoration: none;
+  color: #f25f3a;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 2.2em;
+  padding: 15px 40px;
+}
+.simplify__button:hover,
+.simplify__button:focus {
+  background: #f25f3a;
+  color: #fafafa;
+}
+
+/*---------------------------------------------------<Simplify>--------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
   /*------------------------------------------------<Responsive Navbar>-----------------------------------------------------*/
   .navbar {
@@ -411,6 +442,21 @@ body {
   }
 
   /*------------------------------------------------</Responsive Testimonials>-----------------------------------------------*/
+  /*------------------------------------------------<Responsive Simplify>----------------------------------------------------*/
+  .simplify {
+    padding: 75px 35px;
+    flex-direction: column;
+  }
+  .simplify__title {
+    width: 280px;
+    text-align: center;
+  }
+  .simplify__button {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  /*------------------------------------------------<Responsive Simplify>-----------------------------------------------------------*/
 }
 
 /*# sourceMappingURL=style.css.map */
