@@ -2,7 +2,7 @@
 ###Primary
 
 Bright Red: hsl(12, 88%, 59%)
-Dark Blue: hsl(228, 39%, 23%)
+Dark Blue: hsl(228, 39%, 23%) 
 
 ### Neutral
 
@@ -52,7 +52,7 @@ body {
 }
 /*------------------------------------------<Common Classes>-----------------------------------------------------*/
 
-.btn--color {
+.btn--started {
   margin: 0 15px;
   padding: 15px 40px;
   font-weight: bold;
@@ -66,6 +66,16 @@ body {
   &:hover {
     opacity: 0.9;
   }
+}
+.text--title {
+  font-weight: $font-weight-last;
+  line-height: 1.5;
+  font-size: $font-size + 30;
+  color: $dark-blue;
+}
+.text--description {
+  color: $dark-grayish-blue-one;
+  line-height: 1.7;
 }
 /*---------------------------------------------------</Common Classes>-----------------------------------------------------*/
 
@@ -90,7 +100,7 @@ body {
         text-decoration: none;
         color: $dark-blue;
         &:hover {
-          color: $dark-grayish-blue;
+          opacity: 0.4;
           text-decoration: none !important;
         }
       }
@@ -122,15 +132,9 @@ body {
     padding: 0 50px;
     &__title {
       padding: 20px 0;
-      font-weight: $font-weight-last;
-      line-height: 1.5;
-      font-size: $font-size + 30 !important;
-      color: $dark-blue;
     }
 
     &__description {
-      color: $dark-grayish-blue-one;
-      line-height: 1.7;
       padding: 0 0 20px 0;
     }
   }
@@ -143,43 +147,25 @@ body {
   margin-top: 80px;
   &__info {
     &__title {
-      font-weight: $font-weight-last;
-      line-height: 1.5;
       font-size: $font-size + 21 !important;
-      color: $dark-blue;
     }
     &__description {
-      color: $dark-grayish-blue-one;
-      line-height: 1.7;
       padding: 0 0 20px 0;
     }
   }
   .about__option {
     &__title {
       &__number {
-        font-weight: bold;
-        background-color: $bright-red;
-        border-radius: 5.5em;
-        color: $very-pale-red !important;
-        text-decoration: none;
-        cursor: pointer;
-        font-weight: bold;
-        font-size: $font-size;
         padding: 7px 30px;
         margin-right: 10px;
       }
       &__text {
-        font-weight: $font-weight-last;
-        line-height: 1.5;
         font-size: $font-size + 5 !important;
-        color: $dark-blue;
         text-align: center;
       }
     }
     &__description {
-      color: $dark-grayish-blue-one;
-      line-height: 1.7;
-      padding: 0 100px;
+      padding: 0 110px;
     }
   }
 }
@@ -189,10 +175,6 @@ body {
 .testimonials {
   overflow: hidden;
   &__title {
-    font-weight: $font-weight-last;
-    line-height: 1.5;
-    font-size: $font-size + 30 !important;
-    color: $dark-blue;
     margin: 150px 0px 70px 0px;
     text-align: center;
   }
@@ -222,15 +204,11 @@ body {
         width: 100%;
       }
       &__author {
-        font-weight: $font-weight-last;
-        font-size: $font-size + 6;
-        color: $dark-blue;
+        font-size: $font-size + 6 !important;
         margin-top: 60px;
         text-align: center;
       }
       &__description {
-        color: $dark-grayish-blue-one;
-        line-height: 1.7;
         text-align: center;
       }
     }
@@ -240,20 +218,6 @@ body {
 .testimonial__button {
   margin: 50px 0;
   text-align: center;
-}
-
-@media all and (min-width: 768px) {
-  @keyframes lefttoright {
-    0% {
-      transform: translateX(5%);
-    }
-    50% {
-      transform: translateX(-35%);
-    }
-    100% {
-      transform: translateX(5%);
-    }
-  }
 }
 
 /*---------------------------------------------------</Testimonials>---------------------------------------------------------*/
@@ -271,23 +235,126 @@ body {
     font-weight: $font-weight-last;
   }
   &__button {
-    background: $vary-light-gray;
-    text-decoration: none;
-    color: $bright-red;
-    font-size: $font-size + 1;
-    font-weight: $font-weight-last;
+    background: $vary-light-gray !important;
+    color: $bright-red !important;
     border: none;
-    border-radius: 2.2em;
-    padding: 15px 40px;
     &:hover,
     &:focus {
-      background: $bright-red;
-      color: $vary-light-gray;
+      opacity: 0.9;
     }
   }
 }
 
 /*---------------------------------------------------<Simplify>--------------------------------------------------------------*/
+
+/*---------------------------------------------------<Footer>----------------------------------------------------------------*/
+.footer {
+  background: hsl(233, 12%, 13%);
+  padding: 50px 25px;
+  display: grid;
+  grid-template-areas:
+    "newsletter"
+    "menu"
+    "social"
+    "copyright";
+  &__logo-socials {
+    grid-area: social;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  &__logo-block {
+    text-align: center;
+    margin-bottom: 40px;
+    transform: scale(1.2);
+  }
+  &__logo {
+    vertical-align: middle;
+  }
+  &__social-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15px 50px 15px;
+  }
+  &__svg {
+    transform: scale(1.75);
+  }
+  &__menu {
+    grid-area: menu;
+    list-style: none;
+    padding: 0;
+    margin: 0 20px 40px 40px;
+    display: flex;
+    justify-content: space-between;
+    &__item {
+      margin-bottom: 15px;
+    }
+    &__link {
+      color: $vary-light-gray;
+      text-decoration: none;
+      &:hover {
+        text-decoration: none;
+        color: $bright-red;
+      }
+    }
+  }
+  &__newsletter {
+    grid-area: newsletter;
+    margin-bottom: 50px;
+    &__form {
+      display: grid;
+      grid-template-columns: 75% 25%;
+      grid-gap: 10px;
+    }
+    &__input {
+      font-family: "Be Vietnam", sans-serif;
+      font-weight: 400;
+      border: none;
+      border-radius: 50px;
+      padding: 15px 25px;
+    }
+    &__submit-button {
+      font-family: "Be Vietnam", sans-serif;
+      font-size: 14px;
+      background: hsl(12, 88%, 59%);
+      color: hsl(0, 0%, 98%);
+      text-transform: uppercase;
+      border: none;
+      border-radius: 50px;
+      padding: 15px 0;
+      cursor: pointer;
+      &:hover {
+        background: $vary-light-gray;
+        color: $bright-red;
+      }
+    }
+  }
+  .tooltipp {
+    display: none;
+    font-size: 12px;
+    margin-left: 15px;
+    margin-top: 4px;
+  }
+  &__tooltip {
+    color: #e23630;
+    font-style: italic;
+    &-two {
+      color: #55ca55;
+    }
+  }
+  &__copyright {
+    grid-area: copyright;
+    color: $dark-grayish-blue;
+    text-align: center;
+    font-size: $font-weight-first;
+    font-size: 12px;
+    margin: 0;
+  }
+}
+
+/*---------------------------------------------------</Footer>---------------------------------------------------------------*/
+
 @media screen and (max-width: 768px) {
   /*------------------------------------------------<Responsive Navbar>-----------------------------------------------------*/
   .navbar {
@@ -359,7 +426,7 @@ body {
       &__title {
         padding: 5px 40px;
         line-height: 1.3 !important;
-        font-size: $font-size + 18 !important;
+        font-size: $font-size + 17 !important;
         font-weight: $font-weight-last !important;
         text-align: center;
       }
@@ -390,21 +457,23 @@ body {
       margin-bottom: 0px;
       &__title {
         margin-bottom: 15px;
-
+        background-color: $very-pale-red;
+        padding-bottom: 2px;
         &__number {
-          padding: 7px 20px;
-          margin-right: 0px;
+          padding: 7px 20px !important;
+          margin-left: 0px !important;
+          padding-left: 0px;
         }
         &__text {
-          line-height: 1.3;
+          line-height: 1.3 !important;
           font-size: $font-size + 1 !important;
           text-align: center;
-          background-color: $very-pale-red;
+          font-weight: $font-weight-last;
         }
       }
       &__description {
-        line-height: 1.5;
-        padding: 0 10px;
+        line-height: 1.5 !important;
+        padding: 0 10px !important;
       }
     }
   }
@@ -422,6 +491,7 @@ body {
     &__title {
       font-size: $font-size + 15 !important;
       margin: 0px;
+      line-height: 1.3;
     }
     &__block {
       grid-column: 1;
@@ -487,4 +557,57 @@ body {
   }
 
   /*------------------------------------------------<Responsive Simplify>-----------------------------------------------------------*/
+}
+@media all and (min-width: 769px) {
+  /*---------------------------------------------------<Responsive Footer>----------------------------------------------------------*/
+
+  .footer {
+    padding: 50px;
+    grid-template-areas:
+      "social menu newsletter"
+      "social menu copyright";
+    grid-template-columns: 25% 35% 40%;
+    &__logo-socials {
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    &__logo-block {
+      text-align: left;
+      transform: scale(1);
+    }
+    &__social-links {
+      margin: 0;
+      justify-content: flex-start;
+      & > li {
+        margin-right: 15px;
+      }
+    }
+    &__svg {
+      transform: scale(1.2);
+    }
+    &__menu {
+      margin: 0;
+    }
+    &__newsletter {
+      justify-self: end;
+      width: 90%;
+    }
+    &__copyright {
+      text-align: right;
+    }
+  }
+  /*---------------------------------------------------</Responsive Footer>---------------------------------------------------------*/
+  /*---------------------------------------------------<Slide Animation>------------------------------------------------------------*/
+  @keyframes lefttoright {
+    0% {
+      transform: translateX(5%);
+    }
+    50% {
+      transform: translateX(-35%);
+    }
+    100% {
+      transform: translateX(5%);
+    }
+  }
+  /*--------------------------------------------------</Slide Animation>------------------------------------------------------------*/
 }
